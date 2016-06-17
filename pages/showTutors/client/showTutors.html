@@ -1,0 +1,20 @@
+<template name="showTutors">
+	
+	<h2> Offer tutoring</h2> <br>
+	Name: <input type="text" class="js-name"> <br>
+	Email <input type="text" class= "js-email"> <br>
+	Subject<input type="text" class="js-sub"><br>
+	<button class="js-addTutor"> Submit </button>
+
+	<h1> Here are the tutors</h1>
+	<!--Enter Subject: <input type="text" class="js-subject">
+	<button class="js-showSubject"> Enter</button>-->
+
+
+
+	<ul>
+		{{#each t in tutors}}
+		<li>{{t.name}} is tutoring for {{t.subject}}</li>
+		{{/each}}
+	</ul>
+</template>
