@@ -1,4 +1,5 @@
 <template name="home">
+ <div class="{{theColor}}">
   <h1>Tutoring App</h1>
    <br>
   {{#if currentUser}}
@@ -6,4 +7,13 @@
   {{else}}
      Log in to get started
   {{/if}}
+<br>
+  <select class="js-color">
+  	<option>bg-info</option>
+  	<option>bg-warning</option>
+  </select>
+  Color: {{theColor}}<br>
+  Counter: {{theCounter}}<br>
+  <button class="js-pusher">Push me</button>
+</div>
 </template>

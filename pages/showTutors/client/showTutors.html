@@ -14,7 +14,11 @@
 
 	<ul>
 		{{#each t in tutors}}
-		<li>{{t.name}} is tutoring for {{t.subject}}</li>
+		<li> <a href="/showtutor/{{t._id}}"> {{t.name}} </a> is tutoring for {{t.subject}}</li>
 		{{/each}}
 	</ul>
+</template>
+
+<template name="showTutor">
+	{{name}} tutoring for {{subject}}
 </template>
