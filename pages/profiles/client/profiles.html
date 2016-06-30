@@ -1,0 +1,14 @@
+<template name= "profiles">
+	
+{{#if currentUser}}
+	
+	<h1> Here are the Profiles!</h1>
+	<ol>
+		{{#each p in profiles}}
+		<li> {{p.firstName}} {{p.lastName}} {{p.nickname}} {{p.email}} {{p.birthYear}} {{p.id}} </li>
+		{{/each}}
+	</ol>
+{{else}}
+		<h2> You Need To Sign In</h2>
+{{/if}}
+</template>

@@ -1,0 +1,13 @@
+<template name= "myProfile">
+{{#if currentUser}}
+<h2> Add Your Profile</h2> <br>
+	First Name: <input type="text" class="js-firstName"> <br>
+	Last Name: <input type="text" class="js-lastName"> <br>
+	Nickname: <input type="text" class="js-nickname"> <br>
+	Email <input type="text" class= "js-email"> <br>
+	Birth Year<input type="text" class="js-year"><br>
+	<button class="js-addProfile"> Submit </button>
+{{else}}
+	<h2> You Need To Sign In</h2>
+{{/if}}
+</template>
