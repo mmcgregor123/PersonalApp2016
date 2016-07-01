@@ -16,6 +16,13 @@ Template.showTutors.events({
 		const tutor = {name:name, email:email, subject:sub};
 		console.dir(tutor);
 		Meteor.call("getInfo", tutor);
-	}
+	},
+
+	"click .js-showSubject": function(event){
+		const subject=$(".js-subject").val();
+		Meteor.subscribe(Tutors.find({subject: subject}));
+	},
 })
+
+
 

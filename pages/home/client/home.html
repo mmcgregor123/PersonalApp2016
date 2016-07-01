@@ -1,12 +1,17 @@
 <template name="home">
- <div class="{{theColor}}">
+ 
   <h1>Tutoring App</h1>
    <br>
   {{#if currentUser}}
-     Congratulations for getting logged in!
+     {{#each s in settings}}
+      {{s.greeting}}
+      {{/each}}
+
+
   {{else}}
      Log in to get started
   {{/if}}
+  <div class="{{theColor}}">
 <br>
   <select class="js-color">
   	<option>bg-info</option>

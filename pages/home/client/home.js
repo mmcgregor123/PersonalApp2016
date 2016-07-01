@@ -22,6 +22,10 @@ Template.home.helpers({
 		const instance=Template.instance();
 		return instance.state.get("counter");
 	},
+
+	settings: function(){
+		return Settings.find({});
+	},
 });
 
 Template.home.events({
