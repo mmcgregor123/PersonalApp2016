@@ -6,5 +6,6 @@ Template.settings.events({
 		const setting={greeting:greeting, id:id};
 		console.dir(setting);
 		Meteor.call("changeSettings", setting);
+		Router.go('/');
 	}
 })
