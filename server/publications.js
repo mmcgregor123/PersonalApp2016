@@ -1,5 +1,6 @@
 Meteor.publish("theComments",function(){return Comments.find();});
 Meteor.publish("theTutors",function(){return Tutors.find();});
+Meteor.publish("theBios",function(){return Bios.find();});
 Meteor.publish("theSettings", function(){
 	if(this.userId){
 		return Settings.find({id:this.userId});

@@ -1,0 +1,42 @@
+<template name="quiz4">
+	<h1>Quiz 4</h1>
+	by Michael McGregor
+	<div class="row">
+		<div class="col-md-6 bg-info">
+			<h1> Update your bio below</h1>
+			Name: <input type="text" class="js-name"><br>
+			Bio:<br>
+			<textarea class="js-bio form-control bg-success" rows="5">
+			</textarea>
+			
+			<br>
+			<button class="js-submit"> Update Bio </button>
+		</div>
+	
+
+	
+		<div class="col-md-6 bg-warning">
+			<h1> Select a bio to view</h1>
+			<ul>
+				{{#each b in bios}}
+				<li><a href="/showbio/{{b._id}}"> {{b.name}} </a></li>
+				{{/each}}
+			</ul>
+
+		</div>
+	</div>
+
+
+</template>
+
+<template name="showBio">
+
+	<div class="jumbotron">
+	<h1>{{name}}</h1> <br>
+	<p>{{text}}</p>
+	</div>
+</template>
+
+
+
+
