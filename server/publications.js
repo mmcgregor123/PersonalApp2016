@@ -8,3 +8,7 @@ Meteor.publish("theSettings", function(){
 	}
 	
 });
+
+Meteor.users.deny({
+  update() { return true; }
+});
